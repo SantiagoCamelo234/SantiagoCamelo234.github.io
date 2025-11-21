@@ -12,7 +12,7 @@ const Contact = () => {
   const [status, setStatus] = useState({ type: '', message: '' })
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  // CONFIGURACIÓN DE EMAILJS (TU CONFIG REAL)
+  
   const EMAILJS_CONFIG = {
     serviceId: 'service_83dlkse',
     templateId: 'template_kc8mxbi',
@@ -31,18 +31,12 @@ const Contact = () => {
     setIsSubmitting(true)
     setStatus({ type: '', message: '' })
 
-    // Preparar los datos del template
-    // EmailJS puede usar diferentes nombres de variables según tu template
-    // Prueba con estos nombres comunes si el error persiste
+    
     const templateParams = {
       from_name: formData.name,
       from_email: formData.email,
       message: formData.message,
-      // Variables alternativas comunes (descomenta si tu template las usa):
-      // user_name: formData.name,
-      // user_email: formData.email,
-      // reply_to: formData.email,
-      // subject: `Contacto desde Portfolio - ${formData.name}`
+      
     }
 
     try {

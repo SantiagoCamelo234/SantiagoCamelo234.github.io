@@ -20,11 +20,11 @@ const Header = ({ activeSection }) => {
     }
   }
 
-  // CONFIGURACIÓN - Cambia estos valores
+  
   const socialLinks = {
     github: 'https://github.com/SantiagoCamelo234',
     linkedin: 'https://www.linkedin.com/in/ilvar-camelo-8b7622284/',
-    cv: '/CV_IlvarCamelo.pdf' // Coloca tu CV en la carpeta public
+    cv: '/CV_IlvarCamelo.pdf' 
   }
 
   const navItems = [

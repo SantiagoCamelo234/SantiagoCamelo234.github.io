@@ -2,22 +2,28 @@ import { useEffect, useRef } from 'react'
 import './Technologies.css'
 
 const Technologies = () => {
- 
+  const buildAssetPath = (path) => {
+    const base = import.meta.env.BASE_URL.endsWith('/')
+      ? import.meta.env.BASE_URL
+      : `${import.meta.env.BASE_URL}/`
+    return `${base}${path.replace(/^\/+/, '')}`
+  }
+
   const technologies = [
-    { name: 'React', percentage: 70, color: '#61dafb', logo: '/tech-logos/react.svg' },
-    { name: 'JavaScript', percentage: 85, color: '#f7df1e', logo: '/tech-logos/javascript.svg' },
-    { name: 'TypeScript', percentage: 80, color: '#3178c6', logo: '/tech-logos/typescript.svg' },
-    { name: 'Node.js', percentage: 85, color: '#339933', logo: '/tech-logos/nodejs.svg' },
-    { name: 'Python', percentage: 70, color: '#3776ab', logo: '/tech-logos/python.svg' },
-    { name: 'CSS/SCSS', percentage: 80, color: '#1572b6', logo: '/tech-logos/css.svg' },
-    { name: 'Git', percentage: 80, color: '#f05032', logo: '/tech-logos/git.svg' },
-    { name: 'MongoDB', percentage: 75, color: '#47a248', logo: '/tech-logos/mongodb.svg' },
-    { name: 'MySQL', percentage: 75, color: '#00758f', logo: '/tech-logos/mysql.svg' },
-    { name: 'PostgreSQL', percentage: 75, color: '#336791', logo: '/tech-logos/postgre.svg' },
-    { name: 'Bash', percentage: 75, color: '#3e474a', logo: '/tech-logos/bash.svg' },
-    { name: 'Docker', percentage: 50, color: '#0db7ed', logo: '/tech-logos/docker.svg' },
-    { name: 'Java', percentage: 50, color: '#f89820', logo: '/tech-logos/java.svg' },
-    { name: 'Excel', percentage: 70, color: '#217346', logo: '/tech-logos/excel.svg' },
+    { name: 'React', percentage: 70, color: '#61dafb', logo: buildAssetPath('tech-logos/react.svg') },
+    { name: 'JavaScript', percentage: 85, color: '#f7df1e', logo: buildAssetPath('tech-logos/javascript.svg') },
+    { name: 'TypeScript', percentage: 80, color: '#3178c6', logo: buildAssetPath('tech-logos/typescript.svg') },
+    { name: 'Node.js', percentage: 85, color: '#339933', logo: buildAssetPath('tech-logos/nodejs.svg') },
+    { name: 'Python', percentage: 70, color: '#3776ab', logo: buildAssetPath('tech-logos/python.svg') },
+    { name: 'CSS/SCSS', percentage: 80, color: '#1572b6', logo: buildAssetPath('tech-logos/css.svg') },
+    { name: 'Git', percentage: 80, color: '#f05032', logo: buildAssetPath('tech-logos/git.svg') },
+    { name: 'MongoDB', percentage: 75, color: '#47a248', logo: buildAssetPath('tech-logos/mongodb.svg') },
+    { name: 'MySQL', percentage: 75, color: '#00758f', logo: buildAssetPath('tech-logos/mysql.svg') },
+    { name: 'PostgreSQL', percentage: 75, color: '#336791', logo: buildAssetPath('tech-logos/postgre.svg') },
+    { name: 'Bash', percentage: 75, color: '#3e474a', logo: buildAssetPath('tech-logos/bash.svg') },
+    { name: 'Docker', percentage: 50, color: '#0db7ed', logo: buildAssetPath('tech-logos/docker.svg') },
+    { name: 'Java', percentage: 50, color: '#f89820', logo: buildAssetPath('tech-logos/java.svg') },
+    { name: 'Excel', percentage: 70, color: '#217346', logo: buildAssetPath('tech-logos/excel.svg') },
   ]
 
   const sectionRef = useRef(null)
@@ -68,7 +74,7 @@ const Technologies = () => {
                       alt={`${tech.name} logo`}
                       className="tech-logo"
                       onError={(e) => {
-                        // Si el logo no existe, ocultar la imagen
+                        
                         e.target.style.display = 'none'
                       }}
                     />

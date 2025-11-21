@@ -1,7 +1,7 @@
 import './About.css'
 
 const About = () => {
-  // CONFIGURACIÓN - Cambia estos textos
+ 
   const aboutData = {
     title: 'Sobre Mí',
     subtitle: 'Desarrollador Full Stack',

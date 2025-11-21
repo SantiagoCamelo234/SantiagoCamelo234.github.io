@@ -2,7 +2,7 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import './Projects.css'
 
 const Projects = () => {
-  // CONFIGURACIÓN - Cambia estos proyectos con tus propios datos
+  
   const projects = [
     {
       id: 1,
