@@ -1,0 +1,24 @@
+.App {
+  min-height: 100vh;
+}
+
+main {
+  padding-top: 80px;
+}
+
+section {
+  min-height: 100vh;
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  scroll-margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 20px;
+  }
+}
+
+
+
